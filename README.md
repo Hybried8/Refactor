@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ## Usage
 - Run the tool and provide your Python code for refactoring:
 ```
-python refactor.py
+python refact.py
 ```
 - Enter your Python code when prompted, and the tool will suggest refactoring options based on the AI model.
 - Review the suggestions and apply the desired refactorings to your code.
