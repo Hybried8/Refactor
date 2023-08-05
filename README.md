@@ -1,22 +1,46 @@
-# Refactor
-## AI based code refactor.
+# Refactor - AI-Based Code Refactor Tool
 
-The module's primary focus is to assist users in writing faster, more coherent, and more Pythonic code. OpenAI's ChatGPT model offers two main methods for interacting with it: suggest() and create_conversation(). These instance methods of the ChatGPT class provide suggestions, explanations, or answers related to specific user-written functions, either defined in the same environment or imported. The suggestions can be centered around three key topics: optimizing code speed, improving code style, or explaining the purpose of the function. Users have the flexibility to request the model's assistance in any of these areas to enhance their coding experience. 
+Refactor is an AI-based code refactor tool designed to assist developers in automatically improving the quality of their Python code. The tool uses natural language processing and machine learning techniques to suggest code refactoring options, helping developers write cleaner, more maintainable, and efficient code.
 
-### How to use:
+## Features
 
-<img width="1138" alt="Screenshot 2023-02-02 at 16 49 20" src="https://user-images.githubusercontent.com/93786486/216373017-879c036a-e3c0-4416-bad5-1dfb225245b5.png">
+- AI-powered Code Refactoring: Leverage the power of deep learning to get suggestions for code improvements and refactoring.
+- Syntax-Aware Refactoring: The tool understands Python syntax and ensures that suggested refactorings are valid and maintain the code's correctness.
+- User-Friendly Interface: Intuitive command-line interface for ease of use and quick integration into existing workflows.
 
-We can call the suggest method on our ChatGPT instance. We can specify the focus and if code should be returned 
-(and other kwargs modifying the response's length or randomness).
+## Requirements
 
-<img width="1213" alt="Screenshot 2023-02-03 at 16 23 18" src="https://user-images.githubusercontent.com/93786486/216640778-c150125c-ae9e-4583-ba69-4450a8eea824.png">
+- Python 3.x
+- TensorFlow (Install using `pip install tensorflow`)
 
+## Installation
 
-We can continue the conversation if we are not satisfied with the answer by calling create_conversation with the parameters shown below. 
-To continue the conversation we have to set the forget parameter to False (so that the memory is not emptied) and we can specify a remind_me parameter to be able to look at what's in the model memory (our conversation so far, including the function we inspected and the suggestions it made for us).
-We can either specify the next question as an argument or wait for the input prompt.
-We can exit from the create_conversation function by typing "BYE" or "QUIT".
+- Clone this repository to your local machine:
 
-<img width="1213" alt="Screenshot 2023-02-03 at 16 23 38" src="https://user-images.githubusercontent.com/93786486/216640863-7c3f28a4-3937-42ef-b66e-1a1d8b9c4c23.png">
+```bash
+git clone https://github.com/Hybried8/Refactor.git
+cd Refactor
+```
+- Install requirements
+```
+pip install -r requirements.txt
+```
+## Usage
+- Run the tool and provide your Python code for refactoring:
+```
+python refactor.py
+```
+- Enter your Python code when prompted, and the tool will suggest refactoring options based on the AI model.
+- Review the suggestions and apply the desired refactorings to your code.
 
+## Example Usage
+```
+# Sample Python code before refactoring
+def calculate_area(radius):
+    pi = 3.14
+    return pi * radius * radius
+
+# AI Suggested Refactoring:
+def calculate_area(radius):
+    return 3.14 * radius * radius
+```
